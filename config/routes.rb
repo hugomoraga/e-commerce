@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   	end
   end
 
+  get 'billings/pay', to: 'billings#pre_pay', as: 'pre_pay_billings'
+  get 'billings/execute', to: 'billings#execute', as: 'execute_billings'
+
+
   devise_for :users
 
   root 'products#index'
